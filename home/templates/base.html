@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<head>
+    <title>Lindsey Brockman's Personal Site</title>
+    <script src="https://use.fontawesome.com/19093021a7.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+    <div class="header">
+        <h1><a href="/">Lindsey Brockman</a></h1>
+        <div class="links">
+            <a href="https://github.com/lindseybrockman"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/lindsey-brockman-33059864"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/wowlb"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="mailto:lindseybrockman@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="nav">
+            <ul>
+                <li><h3><a href="/">home</a></h3></li>
+                <li><h3><a href="{% url 'projects' %}">projects</a></h3></li>
+                <li><h3><a href="{% url 'blog' %}">blog</a></h3></li>
+                <li><h3><a href="{% url 'resume' %}">resume</a></h3></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+</body>
+
