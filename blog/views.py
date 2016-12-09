@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'blog.html', {})
+    return render(request, 'blog.html', {'active': 'blog'})
