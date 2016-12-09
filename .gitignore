@@ -91,5 +91,6 @@ ENV/
 .ropeproject
 
 
+static/
 ellbie_home/settings.py
 db.sqlite3
