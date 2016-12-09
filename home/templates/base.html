@@ -18,10 +18,10 @@
     <div class="container">
         <div class="nav">
             <ul>
-                <li><h3><a href="/">home</a></h3></li>
-                <li><h3><a href="{% url 'projects' %}">projects</a></h3></li>
-                <li><h3><a href="{% url 'blog' %}">blog</a></h3></li>
-                <li><h3><a href="{% url 'resume' %}">resume</a></h3></li>
+                <li><h3>{% if active == 'home' %}⇏ {% else %}• {% endif %}<a href="/">home</a></h3></li>
+                <li><h3>{% if active == 'projects' %}⇏ {% else %}• {% endif %}<a href="{% url 'projects' %}">projects</a></h3></li>
+                <li><h3>{% if active == 'blog' %}⇏ {% else %}• {% endif %}<a href="{% url 'blog' %}">blog</a></h3></li>
+                <li><h3>{% if active == 'resume' %}⇏ {% else %}• {% endif %}<a href="{% url 'resume' %}">resume</a></h3></li>
             </ul>
         </div>
 
